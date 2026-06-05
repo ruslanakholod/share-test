@@ -12,9 +12,11 @@
       content="https://share-test123.netlify.app/share/abc123/"
     />
 
-    <meta property="og:title" content="Great job!" />
-    <meta property="og:description" content="You earned 120 XP" />
+    <!-- Minimal text (Duolingo style trick) -->
+    <meta property="og:title" content="." />
+    <meta property="og:description" content="." />
 
+    <!-- Main preview image -->
     <meta
       property="og:image"
       content="https://share-test123.netlify.app/share/abc123/image.png"
@@ -22,19 +24,33 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    <!-- Twitter -->
+    <!-- Optional: Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
 
-    <title>Share Page</title>
+    <title>Share</title>
+
+    <style>
+      body {
+        margin: 0;
+        background: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+      }
+    </style>
   </head>
 
   <body>
-    <h1>Great job!</h1>
-    <p>You earned 120 XP</p>
-    <img
-      src="/share/abc123/image.png"
-      alt="preview"
-      style="max-width: 100%; height: auto;"
-    />
+    <!-- Fallback when opened directly -->
+    <img src="/share/abc123/image.png" alt="share image" />
   </body>
 </html>
